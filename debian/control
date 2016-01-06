@@ -10,14 +10,15 @@ Homepage: <insert the upstream URL, if relevant>
 #Vcs-Git: git://anonscm.debian.org/collab-maint/avogadrolibs.git
 #Vcs-Browser: https://anonscm.debian.org/gitweb/?p=collab-maint/avogadrolibs.git;a=summary
 
-Package: avogadrolibs-dev
+Package: libavogadro2-dev
+Provides: libavogadro-dev
 Section: libdevel
 Architecture: any
-Depends: avogadrolibsBROKEN (= ${binary:Version}), ${misc:Depends}
+Depends: libavogadro2 (= ${binary:Version}), ${misc:Depends}
 Description: <insert up to 60 chars description>
  <insert long description, indented with spaces>
 
-Package: avogadrolibsBROKEN
+Package: libavogadro2
 Architecture: any
 Depends: ${shlibs:Depends}, ${misc:Depends}
 Description: <insert up to 60 chars description>
