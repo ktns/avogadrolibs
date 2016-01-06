@@ -1,0 +1,30 @@
+From: Katsuhiko Nishimra <ktns.87@gmail.com>
+Date: Wed, 6 Jan 2016 18:14:02 +0900
+Subject: Use default rpath handling of cmake
+
+---
+ cmake/InstallLocation.cmake | 14 --------------
+ 1 file changed, 14 deletions(-)
+
+diff --git a/cmake/InstallLocation.cmake b/cmake/InstallLocation.cmake
+index ca9e375..1a978d7 100644
+--- a/cmake/InstallLocation.cmake
++++ b/cmake/InstallLocation.cmake
+@@ -36,17 +36,3 @@ if(UNIX AND NOT APPLE)
+     set(INSTALL_XDG_ICON_DIR "${INSTALL_DATA_DIR}/pixmaps")
+   endif()
+ endif()
+-
+-# Set up RPATH for the project too.
+-option(ENABLE_RPATH "Enable rpath support on Linux and Mac" ON)
+-if(NOT CMAKE_INSTALL_RPATH)
+-  set(CMAKE_INSTALL_RPATH "${CMAKE_INSTALL_PREFIX}/${INSTALL_LIBRARY_DIR}")
+-endif()
+-if(APPLE AND NOT CMAKE_INSTALL_NAME_DIR)
+-  set(CMAKE_INSTALL_NAME_DIR "${CMAKE_INSTALL_PREFIX}/${INSTALL_LIBRARY_DIR}")
+-endif()
+-if(UNIX AND ENABLE_RPATH)
+-  set(CMAKE_SKIP_BUILD_RPATH FALSE)
+-  set(CMAKE_BUILD_WITH_INSTALL_RPATH FALSE)
+-  set(CMAKE_INSTALL_RPATH_USE_LINK_PATH TRUE)
+-endif()
