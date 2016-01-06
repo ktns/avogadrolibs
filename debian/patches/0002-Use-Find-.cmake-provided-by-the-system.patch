@@ -1,0 +1,134 @@
+From: Katsuhiko Nishimra <ktns.87@gmail.com>
+Date: Wed, 6 Jan 2016 16:04:25 +0900
+Subject: Use Find*.cmake provided by the system
+
+---
+ CMakeLists.txt         |  2 --
+ cmake/FindEigen3.cmake | 80 --------------------------------------------------
+ cmake/FindGLEW.cmake   | 17 -----------
+ 3 files changed, 99 deletions(-)
+ delete mode 100644 cmake/FindEigen3.cmake
+ delete mode 100644 cmake/FindGLEW.cmake
+
+diff --git a/CMakeLists.txt b/CMakeLists.txt
+index 88421bd..55a3f49 100644
+--- a/CMakeLists.txt
++++ b/CMakeLists.txt
+@@ -71,8 +71,6 @@ configure_file("${AvogadroLibs_SOURCE_DIR}/cmake/AvogadroLibsConfigVersion.cmake
+ install(FILES
+   "${AvogadroLibs_BINARY_DIR}/AvogadroLibsConfig.cmake"
+   "${AvogadroLibs_BINARY_DIR}/AvogadroLibsConfigVersion.cmake"
+-  "${CMAKE_CURRENT_SOURCE_DIR}/cmake/FindEigen3.cmake"
+-  "${CMAKE_CURRENT_SOURCE_DIR}/cmake/FindGLEW.cmake"
+   DESTINATION "${INSTALL_LIBRARY_DIR}/cmake/avogadrolibs")
+ install(EXPORT "AvogadroLibsTargets"
+   DESTINATION "${INSTALL_LIBRARY_DIR}/cmake/avogadrolibs")
+diff --git a/cmake/FindEigen3.cmake b/cmake/FindEigen3.cmake
+deleted file mode 100644
+index 66ffe8e..0000000
+--- a/cmake/FindEigen3.cmake
++++ /dev/null
+@@ -1,80 +0,0 @@
+-# - Try to find Eigen3 lib
+-#
+-# This module supports requiring a minimum version, e.g. you can do
+-#   find_package(Eigen3 3.1.2)
+-# to require version 3.1.2 or newer of Eigen3.
+-#
+-# Once done this will define
+-#
+-#  EIGEN3_FOUND - system has eigen lib with correct version
+-#  EIGEN3_INCLUDE_DIR - the eigen include directory
+-#  EIGEN3_VERSION - eigen version
+-
+-# Copyright (c) 2006, 2007 Montel Laurent, <montel@kde.org>
+-# Copyright (c) 2008, 2009 Gael Guennebaud, <g.gael@free.fr>
+-# Copyright (c) 2009 Benoit Jacob <jacob.benoit.1@gmail.com>
+-# Redistribution and use is allowed according to the terms of the 2-clause BSD license.
+-
+-if(NOT Eigen3_FIND_VERSION)
+-  if(NOT Eigen3_FIND_VERSION_MAJOR)
+-    set(Eigen3_FIND_VERSION_MAJOR 2)
+-  endif(NOT Eigen3_FIND_VERSION_MAJOR)
+-  if(NOT Eigen3_FIND_VERSION_MINOR)
+-    set(Eigen3_FIND_VERSION_MINOR 91)
+-  endif(NOT Eigen3_FIND_VERSION_MINOR)
+-  if(NOT Eigen3_FIND_VERSION_PATCH)
+-    set(Eigen3_FIND_VERSION_PATCH 0)
+-  endif(NOT Eigen3_FIND_VERSION_PATCH)
+-
+-  set(Eigen3_FIND_VERSION "${Eigen3_FIND_VERSION_MAJOR}.${Eigen3_FIND_VERSION_MINOR}.${Eigen3_FIND_VERSION_PATCH}")
+-endif(NOT Eigen3_FIND_VERSION)
+-
+-macro(_eigen3_check_version)
+-  file(READ "${EIGEN3_INCLUDE_DIR}/Eigen/src/Core/util/Macros.h" _eigen3_version_header)
+-
+-  string(REGEX MATCH "define[ \t]+EIGEN_WORLD_VERSION[ \t]+([0-9]+)" _eigen3_world_version_match "${_eigen3_version_header}")
+-  set(EIGEN3_WORLD_VERSION "${CMAKE_MATCH_1}")
+-  string(REGEX MATCH "define[ \t]+EIGEN_MAJOR_VERSION[ \t]+([0-9]+)" _eigen3_major_version_match "${_eigen3_version_header}")
+-  set(EIGEN3_MAJOR_VERSION "${CMAKE_MATCH_1}")
+-  string(REGEX MATCH "define[ \t]+EIGEN_MINOR_VERSION[ \t]+([0-9]+)" _eigen3_minor_version_match "${_eigen3_version_header}")
+-  set(EIGEN3_MINOR_VERSION "${CMAKE_MATCH_1}")
+-
+-  set(EIGEN3_VERSION ${EIGEN3_WORLD_VERSION}.${EIGEN3_MAJOR_VERSION}.${EIGEN3_MINOR_VERSION})
+-  if(${EIGEN3_VERSION} VERSION_LESS ${Eigen3_FIND_VERSION})
+-    set(EIGEN3_VERSION_OK FALSE)
+-  else(${EIGEN3_VERSION} VERSION_LESS ${Eigen3_FIND_VERSION})
+-    set(EIGEN3_VERSION_OK TRUE)
+-  endif(${EIGEN3_VERSION} VERSION_LESS ${Eigen3_FIND_VERSION})
+-
+-  if(NOT EIGEN3_VERSION_OK)
+-
+-    message(STATUS "Eigen3 version ${EIGEN3_VERSION} found in ${EIGEN3_INCLUDE_DIR}, "
+-                   "but at least version ${Eigen3_FIND_VERSION} is required")
+-  endif(NOT EIGEN3_VERSION_OK)
+-endmacro(_eigen3_check_version)
+-
+-if (EIGEN3_INCLUDE_DIR)
+-
+-  # in cache already
+-  _eigen3_check_version()
+-  set(EIGEN3_FOUND ${EIGEN3_VERSION_OK})
+-
+-else (EIGEN3_INCLUDE_DIR)
+-
+-  find_path(EIGEN3_INCLUDE_DIR NAMES signature_of_eigen3_matrix_library
+-      PATHS
+-      ${CMAKE_INSTALL_PREFIX}/include
+-      ${KDE4_INCLUDE_DIR}
+-      PATH_SUFFIXES eigen3 eigen
+-    )
+-
+-  if(EIGEN3_INCLUDE_DIR)
+-    _eigen3_check_version()
+-  endif(EIGEN3_INCLUDE_DIR)
+-
+-  include(FindPackageHandleStandardArgs)
+-  find_package_handle_standard_args(Eigen3 DEFAULT_MSG EIGEN3_INCLUDE_DIR EIGEN3_VERSION_OK)
+-
+-  mark_as_advanced(EIGEN3_INCLUDE_DIR)
+-
+-endif(EIGEN3_INCLUDE_DIR)
+diff --git a/cmake/FindGLEW.cmake b/cmake/FindGLEW.cmake
+deleted file mode 100644
+index 722da20..0000000
+--- a/cmake/FindGLEW.cmake
++++ /dev/null
+@@ -1,17 +0,0 @@
+-# Find the GLEW library
+-#
+-# Defines:
+-#
+-#  GLEW_FOUND        - system has GLEW
+-#  GLEW_INCLUDE_DIRS - the GLEW include directories
+-#  GLEW_LIBRARY      - The GLEW library
+-#
+-find_path(GLEW_INCLUDE_DIR GL/glew.h)
+-find_library(GLEW_LIBRARY NAMES GLEW glew32)
+-
+-set(GLEW_INCLUDE_DIRS "${GLEW_INCLUDE_DIR}")
+-
+-include(FindPackageHandleStandardArgs)
+-find_package_handle_standard_args(GLEW DEFAULT_MSG GLEW_INCLUDE_DIR GLEW_LIBRARY)
+-
+-mark_as_advanced(GLEW_INCLUDE_DIR GLEW_LIBRARY)
