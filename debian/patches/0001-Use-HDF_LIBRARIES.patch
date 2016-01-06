@@ -1,0 +1,18 @@
+From: Katsuhiko Nishimra <ktns.87@gmail.com>
+Date: Wed, 6 Jan 2016 15:25:09 +0900
+Subject: Use ${HDF_LIBRARIES}
+
+---
+ avogadro/io/CMakeLists.txt | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+diff --git a/avogadro/io/CMakeLists.txt b/avogadro/io/CMakeLists.txt
+index 1182f76..4466721 100644
+--- a/avogadro/io/CMakeLists.txt
++++ b/avogadro/io/CMakeLists.txt
+@@ -37,4 +37,4 @@ set(SOURCES
+ avogadro_add_library(AvogadroIO ${HEADERS} ${SOURCES})
+ 
+ # hdf5 is the HDF5 imported target
+-target_link_libraries(AvogadroIO LINK_PUBLIC AvogadroCore LINK_PRIVATE hdf5)
++target_link_libraries(AvogadroIO LINK_PUBLIC AvogadroCore LINK_PRIVATE ${HDF5_LIBRARIES})
