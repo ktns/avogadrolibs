@@ -1,2 +1,3 @@
 0001-Use-HDF_LIBRARIES.patch
 0002-Use-Find-.cmake-provided-by-the-system.patch
+0003-Leave-READMEs-to-dh_installdocs.patch
