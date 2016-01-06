@@ -1,0 +1,37 @@
+From: Katsuhiko Nishimra <ktns.87@gmail.com>
+Date: Wed, 6 Jan 2016 16:40:33 +0900
+Subject: Add SOVERSION of libararies
+
+---
+ CMakeLists.txt          | 5 +++--
+ avogadro/CMakeLists.txt | 1 +
+ 2 files changed, 4 insertions(+), 2 deletions(-)
+
+diff --git a/CMakeLists.txt b/CMakeLists.txt
+index aa61a68..73f2bcb 100644
+--- a/CMakeLists.txt
++++ b/CMakeLists.txt
+@@ -16,8 +16,9 @@ set(AvogadroLibs_VERSION_MINOR   "8")
+ set(AvogadroLibs_VERSION_PATCH   "0")
+ set(AvogadroLibs_VERSION
+   "${AvogadroLibs_VERSION_MAJOR}.${AvogadroLibs_VERSION_MINOR}.${AvogadroLibs_VERSION_PATCH}")
+-find_package(Git)
+-determine_version(${AvogadroLibs_SOURCE_DIR} ${GIT_EXECUTABLE} "AvogadroLibs")
++set(AvogadroLibs_SOVERSION "2")
++#find_package(Git)
++#determine_version(${AvogadroLibs_SOURCE_DIR} ${GIT_EXECUTABLE} "AvogadroLibs")
+ 
+ option(BUILD_SHARED_LIBS "Build with shared libraries" ON)
+ 
+diff --git a/avogadro/CMakeLists.txt b/avogadro/CMakeLists.txt
+index b5c2489..436c338 100644
+--- a/avogadro/CMakeLists.txt
++++ b/avogadro/CMakeLists.txt
+@@ -7,6 +7,7 @@ function(avogadro_add_library name)
+     set_target_properties(${name} PROPERTIES AUTOMOC TRUE)
+     message("Using automoc for Qt library")
+   endif()
++  set_target_properties(${name} PROPERTIES VERSION ${AvogadroLibs_VERSION} SOVERSION ${AvogadroLibs_SOVERSION})
+   string(TOLOWER ${name} lowerName)
+   # Generate the necessary export headers.
+   generate_export_header(${name} EXPORT_FILE_NAME ${lowerName}export.h)
