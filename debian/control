@@ -7,8 +7,8 @@ Build-Depends: debhelper (>= 9), cmake (>= 2.8.8), cmake-data (>= 2.8.8),
                libqt5opengl5-dev, qtbase5-dev, libvtk6-dev,
                libmolequeue-dev (>= 0.8.0)
 Standards-Version: 3.9.6
-Section: libs
-Homepage: <insert the upstream URL, if relevant>
+Section: science
+Homepage: http://www.openchemistry.org/projects/avogadro2/
 #Vcs-Git: git://anonscm.debian.org/collab-maint/avogadrolibs.git
 #Vcs-Browser: https://anonscm.debian.org/gitweb/?p=collab-maint/avogadrolibs.git;a=summary
 
@@ -17,11 +17,29 @@ Provides: libavogadro-dev
 Section: libdevel
 Architecture: any
 Depends: libavogadro2 (= ${binary:Version}), ${misc:Depends}
-Description: <insert up to 60 chars description>
- <insert long description, indented with spaces>
+Description: chemical editor and visualization application - headers
+ Avogadro 2 is a chemical editor and visualization application, it is also a
+ set of reusable software libraries written in C++ using principles of
+ modularity for maximum reuse. The development of the first generation Avogadro
+ application and library is documented in our paper, and this remains the
+ preferred method of citation at present. The motivation for rewriting
+ Avogadro, along with improvements and changes made in Avogadro 2 are
+ summarized in our Source article. We provide a set of permissively licensed,
+ open source, cross platform software components in the Avogadro 2 libraries,
+ along with an end-user application with full source code, and binaries.
+ This package includes library headers.
 
 Package: libavogadro2
 Architecture: any
 Depends: ${shlibs:Depends}, ${misc:Depends}
-Description: <insert up to 60 chars description>
- <insert long description, indented with spaces>
+Description: chemical editor and visualization application - libraries
+ Avogadro 2 is a chemical editor and visualization application, it is also a
+ set of reusable software libraries written in C++ using principles of
+ modularity for maximum reuse. The development of the first generation Avogadro
+ application and library is documented in our paper, and this remains the
+ preferred method of citation at present. The motivation for rewriting
+ Avogadro, along with improvements and changes made in Avogadro 2 are
+ summarized in our Source article. We provide a set of permissively licensed,
+ open source, cross platform software components in the Avogadro 2 libraries,
+ along with an end-user application with full source code, and binaries.
+ This package includes libraries.
