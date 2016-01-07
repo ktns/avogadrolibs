@@ -1,2 +1,2 @@
 usr/lib/*/lib*.so.*
-debian/tmp/usr/lib/*/avogadro2/scripts/
+usr/lib/*/avogadro2/scripts/*/*.py
