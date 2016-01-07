@@ -2,8 +2,304 @@ Format: https://www.debian.org/doc/packaging-manuals/copyright-format/1.0/
 Upstream-Name: avogadrolibs
 Source: https://github.com/OpenChemistry/avogadrolibs
 
-Files: *
-Copyright: 2010-2015 Kitware Inc.
+Files: avogadro/core/array.h avogadro/core/atom.h avogadro/core/bond.h
+			 avogadro/core/coordinateset.h avogadro/core/graph.(cpp|h)
+			 avogadro/core/ringperceiver.(cpp|h) avogadro/core/variant-inline.h
+			 avogadro/core/variant.h avogadro/core/variantmap.(cpp|h)
+Copyright: 2011-2012 Kitware, Inc.
+License: BSD-3-Clause
+
+Files: avogadro/core/avogadrocore.h
+Copyright: 2011-2013 Kitware, Inc.
+License: BSD-3-Clause
+
+Files: avogadro/core/elements.(cpp|h) avogadro/core/matrix.h avogadro/core/vector.h
+			 avogadro/core/version.cpp avogadro/io/cjsonformat.(cpp|h)
+			 avogadro/io/cmlformat.(cpp|h) avogadro/io/hdf5dataformat.(cpp|h)
+			 avogadro/qtgui/extensionplugin.(cpp|h) avogadro/qtgui/molecule.(cpp|h)
+			 avogadro/qtgui/sceneplugin.(cpp|h)
+			 avogadro/qtgui/scenepluginmodel.(cpp|h)
+			 avogadro/qtplugins/ballandstick/ballandstick.(cpp|h)
+			 avogadro/qtplugins/gamessinput/gamessinput.(cpp|h)
+			 avogadro/qtplugins/gamessinput/gamessinputdialog.(cpp|h)
+			 avogadro/qtplugins/molecularproperties/molecularproperties.(cpp|h)
+			 avogadro/qtplugins/molecularproperties/molecularpropertiesdialog.(cpp|h)
+			 avogadro/qtplugins/pluginmanager.(cpp|h)
+			 avogadro/qtplugins/vanderwaals/vanderwaals.(cpp|h)
+			 avogadro/rendering/avogadrogl.h avogadro/rendering/bufferobject.(cpp|h)
+			 avogadro/rendering/glrenderer.(cpp|h)
+			 avogadro/rendering/glrendervisitor.(cpp|h)
+			 avogadro/rendering/groupnode.(cpp|h)
+			 avogadro/rendering/linestripgeometry.(cpp|h)
+			 avogadro/rendering/meshgeometry.(cpp|h) avogadro/rendering/node.(cpp|h)
+			 avogadro/rendering/primitive.h avogadro/rendering/scene.(cpp|h)
+			 avogadro/rendering/shader.(cpp|h)
+			 avogadro/rendering/shaderprogram.(cpp|h)
+Copyright: 2012 Kitware, Inc.
+License: BSD-3-Clause
+
+Files: avogadro/qtopengl/glwidget.(cpp|h)
+			 avogadro/qtplugins/editor/editor.(cpp|h)
+			 avogadro/qtplugins/manipulator/manipulator.(cpp|h)
+			 avogadro/qtplugins/navigator/navigator.(cpp|h)
+			 avogadro/qtplugins/quantuminput/quantuminput.(cpp|h)
+			 avogadro/qtplugins/quantumoutput/quantumoutput.(cpp|h)
+Copyright: 2012-2013 Kitware, Inc.
+License: BSD-3-Clause
+
+Files: avogadro/rendering/camera.cpp
+Copyright: 2012-2014 Kitware, Inc.
+License: BSD-3-Clause
+
+Files: avogadro/core/atomtyper-inline.h avogadro/core/atomtyper.h
+			 avogadro/core/coordinateblockgenerator.(cpp|h)
+			 avogadro/core/crystaltools.(cpp|h) avogadro/core/hydrogentools.(cpp|h)
+			 avogadro/core/mutex.(cpp|h) avogadro/core/nameatomtyper.(cpp|h)
+			 avogadro/core/symbolatomtyper.(cpp|h) avogadro/core/types.h
+			 avogadro/core/unitcell.(cpp|h) avogadro/core/utilities.h
+			 avogadro/io/fileformat.(cpp|h) avogadro/io/fileformatmanager.(cpp|h)
+			 avogadro/io/gromacsformat.(cpp|h) avogadro/io/mdlformat.(cpp|h)
+			 avogadro/io/xyzformat.(cpp|h) avogadro/molequeue/batchjob.(cpp|h)
+			 avogadro/molequeue/inputgenerator.(cpp|h)
+			 avogadro/molequeue/inputgeneratordialog.(cpp|h)
+			 avogadro/molequeue/inputgeneratorwidget.(cpp|h)
+			 avogadro/molequeue/molequeuedialog.(cpp|h)
+			 avogadro/molequeue/molequeuequeuelistmodel.(cpp|h)
+			 avogadro/molequeue/molequeuewidget.(cpp|h)
+			 avogadro/protocall/matrixserialization.(cpp|h)
+			 avogadro/protocall/moleculedeserializer.(cpp|h)
+			 avogadro/protocall/moleculeserializer.(cpp|h)
+			 avogadro/qtgui/customelementdialog.(cpp|h)
+			 avogadro/qtgui/filebrowsewidget.(cpp|h)
+			 avogadro/qtgui/fileformatdialog.(cpp|h)
+			 avogadro/qtgui/generichighlighter.(cpp|h)
+			 avogadro/qtgui/persistentatom.h avogadro/qtgui/persistentbond.h
+			 avogadro/qtgui/pythonscript.h avogadro/qtgui/toolplugin.(cpp|h)
+			 avogadro/qtgui/utilities.(cpp|h)
+			 avogadro/qtopengl/qttextrenderstrategy.(cpp|h)
+			 avogadro/qtplugins/apbs/apbs.(cpp|h)
+			 avogadro/qtplugins/apbs/apbsdialog.(cpp|h)
+			 avogadro/qtplugins/apbs/apbsoutputdialog.(cpp|h)
+			 avogadro/qtplugins/apbs/opendxreader.(cpp|h)
+			 avogadro/qtplugins/bonding/bonding.(cpp|h)
+			 avogadro/qtplugins/clientserver/avogadroserver.(cpp|h)
+			 avogadro/qtplugins/clientserver/avoremotefilesystemservice.(cpp|h)
+			 avogadro/qtplugins/clientserver/avoremotemoleculeservice.(cpp|h)
+			 avogadro/qtplugins/clientserver/clientserver.(cpp|h)
+			 avogadro/qtplugins/clientserver/connectionsettingsdialog.(cpp|h)
+			 avogadro/qtplugins/clientserver/filedialog.(cpp|h)
+			 avogadro/qtplugins/clientserver/filedialogfilter.(cpp|h)
+			 avogadro/qtplugins/clientserver/filedialogmodel.(cpp|h)
+			 avogadro/qtplugins/coordinateeditor/coordinateeditor.(cpp|h)
+			 avogadro/qtplugins/coordinateeditor/coordinateeditordialog.(cpp|h)
+			 avogadro/qtplugins/coordinateeditor/coordinatetextedit.(cpp|h)
+			 avogadro/qtplugins/copypaste/copypaste.(cpp|h)
+			 avogadro/qtplugins/crystal/crystal.(cpp|h)
+			 avogadro/qtplugins/crystal/crystalscene.(cpp|h)
+			 avogadro/qtplugins/crystal/unitcelldialog.(cpp|h)
+			 avogadro/qtplugins/crystal/volumescalingdialog.(cpp|h)
+			 avogadro/qtplugins/customelements/customelements.(cpp|h)
+			 avogadro/qtplugins/editor/editortoolwidget.(cpp|h)
+			 avogadro/qtplugins/hydrogens/hydrogens.(cpp|h)
+			 avogadro/qtplugins/licorice/licorice.(cpp|h)
+			 avogadro/qtplugins/lineformatinput/lineformatinput.(cpp|h)
+			 avogadro/qtplugins/lineformatinput/lineformatinputdialog.(cpp|h)
+			 avogadro/qtplugins/meshes/meshes.(cpp|h)
+			 avogadro/qtplugins/mongochem/mongochem.(cpp|h)
+			 avogadro/qtplugins/openbabel/obfileformat.(cpp|h)
+			 avogadro/qtplugins/openbabel/obforcefielddialog.(cpp|h)
+			 avogadro/qtplugins/openbabel/obprocess.(cpp|h)
+			 avogadro/qtplugins/openbabel/openbabel.(cpp|h)
+			 avogadro/qtplugins/overlayaxes/overlayaxes.(cpp|h)
+			 avogadro/qtplugins/pluginfactory.h
+			 avogadro/qtplugins/quantuminput/inputGenerators/apbs.py
+			 avogadro/qtplugins/quantuminput/inputGenerators/gamessuk.py
+			 avogadro/qtplugins/quantuminput/inputGenerators/gaussian.py
+			 avogadro/qtplugins/quantuminput/inputGenerators/inputgeneratortest.py
+			 avogadro/qtplugins/quantuminput/inputGenerators/molpro.py
+			 avogadro/qtplugins/quantuminput/inputGenerators/mopac.py
+			 avogadro/qtplugins/quantuminput/inputGenerators/nwchem.py
+			 avogadro/qtplugins/quantuminput/inputGenerators/qchem.py
+			 avogadro/qtplugins/quantuminput/inputGenerators/terachem.py
+			 avogadro/qtplugins/quantumoutput/gaussiansetconcurrent.(cpp|h)
+			 avogadro/qtplugins/quantumoutput/slatersetconcurrent.(cpp|h)
+			 avogadro/qtplugins/scriptfileformats/fileformatscript.(cpp|h)
+			 avogadro/qtplugins/scriptfileformats/formatScripts/zyx.py
+			 avogadro/qtplugins/scriptfileformats/scriptfileformats.(cpp|h)
+			 avogadro/rendering/avogadrorendering.h
+			 avogadro/rendering/cylindergeometry.(cpp|h)
+			 avogadro/rendering/drawable.(cpp|h)
+			 avogadro/rendering/geometrynode.(cpp|h)
+			 avogadro/rendering/geometryvisitor.(cpp|h)
+			 avogadro/rendering/spheregeometry.(cpp|h)
+			 avogadro/rendering/textlabel2d.(cpp|h)
+			 avogadro/rendering/textlabel3d.(cpp|h)
+			 avogadro/rendering/textlabelbase.(cpp|h)
+			 avogadro/rendering/textproperties.(cpp|h)
+			 avogadro/rendering/textrenderstrategy.(cpp|h)
+Copyright: 2013 Kitware, Inc.
+License: BSD-3-Clause
+
+Files: avogadro/command/cjsontocml.cpp avogadro/qtgui/moleculemodel.(cpp|h)
+       avogadro/qtgui/rwmolecule.(cpp|h)
+Copyright: 2013-2014 Kitware, Inc.
+License: BSD-3-Clause
+
+
+Files: avogadro/command/avobabel.cpp avogadro/qtgui/containerwidget.(cpp|h)
+			 avogadro/qtgui/multiviewwidget.(cpp|h)
+			 avogadro/qtgui/viewfactory.(cpp|h)
+			 avogadro/qtplugins/playertool/playertool.(cpp|h)
+			 avogadro/qtplugins/povray/povray.(cpp|h)
+			 avogadro/qtplugins/wireframe/wireframe.(cpp|h)
+			 avogadro/rendering/povrayvisitor.(cpp|h)
+Copyright: 2014 Kitware, Inc.
+
+Files: avogadro/qtgui/elementdetail_p.(cpp|h) avogadro/qtgui/elementitem_p.(cpp|h)
+			 avogadro/qtgui/periodictablescene_p.(cpp|h)
+			 avogadro/qtgui/periodictableview.(cpp|h)
+Copyright: 2007-2009 by Marcus D. Hanwell
+           2012 Kitware, Inc.
+License: BSD-3-Clause
+
+Files: avogadro/core/mesh.(cpp|h)
+Copyright: 2008 Marcus D. Hanwell
+           2012 Kitware, Inc.
+License: BSD-3-Clause
+
+Files: avogadro/quantumio/gamessus.h
+Copyright: 2008 Marcus D. Hanwell
+           2010-2013 Kitware, Inc.
+License: BSD-3-Clause
+
+Files: avogadro/quantumio/gamessus.cpp
+Copyright: 2010 Geoffrey R. Hutchison
+License: BSD-3-Clause
+
+Files: avogadro/core/basisset.h avogadro/core/cube.(cpp|h)
+			 avogadro/core/slaterset.(cpp|h) avogadro/quantumio/gaussianfchk.(cpp|h)
+			 avogadro/quantumio/mopacaux.(cpp|h)
+Copyright: 2008-2009 Marcus D. Hanwell
+           2010-2013 Kitware, Inc.
+License: BSD-3-Clause
+
+Files: avogadro/qtgui/meshgenerator.(cpp|h)
+Copyright: 2008-2009 Marcus D. Hanwell
+           2012 Kitware, Inc.
+License: BSD-3-Clause
+
+Files: avogadro/qtplugins/gamessinput/gamesshighlighter.(cpp|h)
+Copyright: 2009 Marcus D. Hanwell 
+License: BSD-3-Clause
+
+Files: avogadro/core/color3f.h 
+Copyright: 2009 Marcus D. Hanwell 
+           2012 Kitware, Inc.
+License: BSD-3-Clause
+
+Files: avogadro/qtplugins/networkdatabases/networkdatabases.(cpp|h)
+       avogadro/qtplugins/quantumoutput/surfacedialog.(cpp|h)
+Copyright: 2009 Marcus D. Hanwell 
+           2013 Kitware, Inc.
+License: BSD-3-Clause
+
+Files: avogadro/core/gaussianset.(cpp|h) avogadro/core/gaussiansettools.(cpp|h)
+			 avogadro/core/slatersettools.(cpp|h)
+Copyright: 2008-2009 Marcus D. Hanwell 
+           2008 Albert De Fusco
+           2010-2013 Kitware, Inc.
+License: BSD-3-Clause
+
+Files: avogadro/quantumio/gamessukout.(cpp|h)
+Copyright: 2010 Jens Thomas
+           2010-2013 Kitware, Inc.
+License: BSD-3-Clause
+
+Files: avogadro/qtgui/elementtranslator.(cpp|h)
+Copyright: 2007 Geoffrey R. Hutchison
+           2012 Kitware, Inc.
+License: BSD-3-Clause
+
+Files: avogadro/quantumio/molden.(cpp|h)
+Copyright: 2010 Geoffrey R. Hutchison
+           2013 Kitware, Inc.
+License: BSD-3-Clause
+
+Files: avogadro/quantumio/gamessus.cpp
+Copyright: 2010 Geoffrey R. Hutchison
+License: BSD-3-Clause
+
+Files: avogadro/core/molecule.(cpp|h)
+Copyright: 2011-2014 Kitware, Inc.
+           2011-2014 Geoffrey R. Hutchison
+License: BSD-3-Clause
+
+Files: avogadro/core/mdlvalence_p.h
+Copyright: 2013 Kitware, Inc
+           2012 NextMove Software
+License: BSD-3-Clause
+
+Files: avogadro/qtplugins/vanderwaalsao/vanderwaalsao.(cpp|h)
+Copyright: 2012 Kitware, Inc.
+           2013 Tim Vandermeersch <tim.vandermeersch@gmail.com>
+License: BSD-3-Clause
+
+Files: avogadro/rendering/ambientocclusionspheregeometry.(cpp|h)
+Copyright: 2013 Kitware, Inc.
+           2013 Tim Vandermeersch <tim.vandermeersch@gmail.com>
+License: BSD-3-Clause
+
+Files: avogadro/command/qube.cpp:
+Copyright: 2014 Albert DeFusco University of Pittsburgh
+License: BSD-3-Clause
+
+Files: avogadro/quantumio/gaussiancube.(cpp|h)
+Copyright: 2015 Barry E. Moore II
+License: BSD-3-Clause
+
+Files: avogadro/qtgui/elementtranslator.(cpp|h)
+       avogadro/qtplugins/measuretool/measuretool.(cpp|h)
+Copyright: 2013 Kitware, Inc.
+           2007 Donald Ephraim Curtis
+           2008 Marcus D. Hanwell
+License: BSD-3-Clause
+
+Files: avogadro/qtplugins/bondcentrictool/bondcentrictool.(cpp|h)
+Copyright: 2013 Kitware, Inc
+           2007 Shahzad Ali
+           2007 Ross Braithwaite
+           2007 James Bunt
+           2007,2008 Marcus D. Hanwell
+           2006,2007 Benoit Jacob
+License: BSD-3-Clause
+
+Files: avogadro/qtplugins/qtaim/qtaimcriticalpointlocator.(cpp|h)
+       avogadro/qtplugins/qtaim/qtaimlsodaintegrator.(cpp|h)
+			 avogadro/qtplugins/qtaim/qtaimmathutilities.(cpp|h)
+			 avogadro/qtplugins/qtaim/qtaimodeintegrator.(cpp|h)
+			 avogadro/qtplugins/qtaim/qtaimwavefunction.(cpp|h)
+			 avogadro/qtplugins/qtaim/qtaimwavefunctionevaluator.(cpp|h)
+Copyright: 2010 Eric C. Brown
+License: BSD-3-Clause
+
+Files: avogadro/qtplugins/qtaim/qtaimextension.(cpp|h)
+Copyright: 2010 Eric C. Brown
+           2013 Kitware, Inc.
+License: BSD-3-Clause
+
+Files: avogadro/qtplugins/qtaim/qtaimcubature.(cpp|h)
+Copyright: 2010 Eric C. Brown
+           2005-2009 Steven G. Johnson
+License: GPL-3.0+
+
+Files: avogadro/qtplugins/qtaim/qtaimengine.(cpp|h)
+Copyright: 2007 Donald Ephraim Curtis
+           2010 Eric C. Brown
+           2013 Kitware, Inc.
+License: BSD-3-Clause
+
+Files: cmake/GenerateExportHeader.cmake
+Copyright: 2011 Stephen Kelly <steveire@gmail.com>
 License: BSD-3-Clause
 
 Files: thirdparty/jsoncpp/*
@@ -83,3 +379,25 @@ License: PD-or-MIT
  CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
  SOFTWARE.
  ========================================================================
+
+License: GPL-3.0+
+ This program is free software: you can redistribute it and/or modify
+ it under the terms of the GNU General Public License as published by
+ the Free Software Foundation, either version 3 of the License, or
+ (at your option) any later version.
+ .
+ This package is distributed in the hope that it will be useful,
+ but WITHOUT ANY WARRANTY; without even the implied warranty of
+ MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ GNU General Public License for more details.
+ .
+ You should have received a copy of the GNU General Public License
+ along with this program. If not, see <http://www.gnu.org/licenses/>.
+ .
+ On Debian systems, the complete text of the GNU General
+ Public License version 3 can be found in "/usr/share/common-licenses/GPL-3".
+
+# Please also look if there are files or directories which have a
+# different copyright/license attached and list them here.
+# Please avoid to pick license terms that are more restrictive than the
+# packaged work, as it may make Debian's contributions unacceptable upstream.
