@@ -3,12 +3,12 @@ Date: Wed, 6 Jan 2016 16:40:33 +0900
 Subject: Add SOVERSION of libararies
 
 ---
- CMakeLists.txt          | 5 +++--
+ CMakeLists.txt          | 4 ++--
  avogadro/CMakeLists.txt | 1 +
- 2 files changed, 4 insertions(+), 2 deletions(-)
+ 2 files changed, 3 insertions(+), 2 deletions(-)
 
 diff --git a/CMakeLists.txt b/CMakeLists.txt
-index aa61a68..73f2bcb 100644
+index aa61a68..164ae62 100644
 --- a/CMakeLists.txt
 +++ b/CMakeLists.txt
 @@ -16,8 +16,8 @@ set(AvogadroLibs_VERSION_MINOR   "8")
@@ -23,7 +23,7 @@ index aa61a68..73f2bcb 100644
  option(BUILD_SHARED_LIBS "Build with shared libraries" ON)
  
 diff --git a/avogadro/CMakeLists.txt b/avogadro/CMakeLists.txt
-index b5c2489..436c338 100644
+index b5c2489..852ab47 100644
 --- a/avogadro/CMakeLists.txt
 +++ b/avogadro/CMakeLists.txt
 @@ -7,6 +7,7 @@ function(avogadro_add_library name)

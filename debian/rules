@@ -21,6 +21,19 @@ include /usr/share/dpkg/default.mk
 %:
 	dh $@ --parallel
 
+override_dh_auto_configure::
+	dh_auto_configure -- \
+		-DAvogadroCore_Lib_SOVERSION=0 \
+		-DAvogadroIO_Lib_SOVERSION=0 \
+		-DAvogadroMoleQueue_Lib_SOVERSION=0 \
+		-DAvogadroProtoCall_Lib_SOVERSION=0 \
+		-DAvogadroQtGui_Lib_SOVERSION=0 \
+		-DAvogadroQtOpenGL_Lib_SOVERSION=0 \
+		-DAvogadroQtPlugins_Lib_SOVERSION=0 \
+		-DAvogadroQuantumIO_Lib_SOVERSION=0 \
+		-DAvogadroRendering_Lib_SOVERSION=0 \
+		-DAvogadroVtk_Lib_SOVERSION=0
+
 override_dh_install:
 	dh_install --fail-missing
 

@@ -1,6 +1,6 @@
 0001-Use-HDF_LIBRARIES.patch
 0002-Use-Find-.cmake-provided-by-the-system.patch
 0003-Leave-READMEs-to-dh_installdocs.patch
-0004-Add-SOVERSION-of-libararies.patch
-0005-Use-default-rpath-handling-of-cmake.patch
-0006-Use-system-libjsoncpp.patch
+0004-Use-default-rpath-handling-of-cmake.patch
+0005-Use-system-libjsoncpp.patch
+0006-Add-SOVERSION-of-libararies.patch
