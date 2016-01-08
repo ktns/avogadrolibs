@@ -1,5 +1,12 @@
-avogadrolibs (0.8.0-0) UNRELEASED; urgency=low
+avogadrolibs (0.8.0-1~1.gbpead7d1) UNRELEASED; urgency=low
+
+  ** SNAPSHOT build @ead7d1c0daa89856745c00e7b8360548bc6de2ee **
 
   * Initial release.
+  * Add SOVERSIONs of libararies
+  * Use ${HDF_LIBRARIES} instead of hardcoded -lhdf5
+  * Use Find*.cmake provided by the system
+  * Use system libjsoncpp
+  * Fix permissions of python libarary
 
- -- Katsuhiko Nishimra <ktns.87@gmail.com>  Sun, 03 Jan 2016 02:40:45 +0900
+ -- Katsuhiko Nishimra <ktns.87@gmail.com>  Fri, 08 Jan 2016 15:01:57 +0900
