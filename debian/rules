@@ -39,4 +39,4 @@ override_dh_install:
 
 override_dh_fixperms::
 	dh_fixperms
-	chmod -x debian/libavogadro2/usr/lib/x86_64-linux-gnu/avogadro2/scripts/*/*.py
+	chmod -x debian/avogadrolibs-python/usr/lib/x86_64-linux-gnu/avogadro2/scripts/*/*.py

@@ -12,11 +12,20 @@ Homepage: http://www.openchemistry.org/projects/avogadro2/
 #Vcs-Git: git://anonscm.debian.org/collab-maint/avogadrolibs.git
 #Vcs-Browser: https://anonscm.debian.org/gitweb/?p=collab-maint/avogadrolibs.git;a=summary
 
-Package: libavogadro2-dev
-Provides: libavogadro-dev
+Package: avogadrolibs-dev
 Section: libdevel
 Architecture: any
-Depends: libavogadro2 (= ${binary:Version}), ${misc:Depends}
+Depends: libavogadrocore0 (= ${binary:Version}),
+         libavogadroio0 (= ${binary:Version}),
+         libavogadromolequeue0 (= ${binary:Version}),
+         libavogadroqtgui0 (= ${binary:Version}),
+         libavogadroqtopengl0 (= ${binary:Version}),
+         libavogadroqtplugins0 (= ${binary:Version}),
+         libavogadroquantumio0 (= ${binary:Version}),
+         libavogadrorendering0 (= ${binary:Version}),
+         libavogadrovtk0 (= ${binary:Version}),
+         avogadrolibs-python (= ${binary:Version}),
+         ${misc:Depends}
 Description: chemical editor and visualization application - headers
  Avogadro 2 is a chemical editor and visualization application, it is also a
  set of reusable software libraries written in C++ using principles of
@@ -29,10 +38,10 @@ Description: chemical editor and visualization application - headers
  along with an end-user application with full source code, and binaries.
  This package includes library headers.
 
-Package: libavogadro2
+Package: libavogadrocore0
 Architecture: any
 Depends: ${shlibs:Depends}, ${misc:Depends}
-Description: chemical editor and visualization application - libraries
+Description: chemical editor and visualization application - core library
  Avogadro 2 is a chemical editor and visualization application, it is also a
  set of reusable software libraries written in C++ using principles of
  modularity for maximum reuse. The development of the first generation Avogadro
@@ -42,4 +51,140 @@ Description: chemical editor and visualization application - libraries
  summarized in our Source article. We provide a set of permissively licensed,
  open source, cross platform software components in the Avogadro 2 libraries,
  along with an end-user application with full source code, and binaries.
- This package includes libraries.
+ This package includes the core library.
+
+Package: libavogadroio0
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}
+Description: chemical editor and visualization application - io library
+ Avogadro 2 is a chemical editor and visualization application, it is also a
+ set of reusable software libraries written in C++ using principles of
+ modularity for maximum reuse. The development of the first generation Avogadro
+ application and library is documented in our paper, and this remains the
+ preferred method of citation at present. The motivation for rewriting
+ Avogadro, along with improvements and changes made in Avogadro 2 are
+ summarized in our Source article. We provide a set of permissively licensed,
+ open source, cross platform software components in the Avogadro 2 libraries,
+ along with an end-user application with full source code, and binaries.
+ This package includes the io library.
+
+Package: libavogadromolequeue0
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}
+Description: chemical editor and visualization application - io library
+ Avogadro 2 is a chemical editor and visualization application, it is also a
+ set of reusable software libraries written in C++ using principles of
+ modularity for maximum reuse. The development of the first generation Avogadro
+ application and library is documented in our paper, and this remains the
+ preferred method of citation at present. The motivation for rewriting
+ Avogadro, along with improvements and changes made in Avogadro 2 are
+ summarized in our Source article. We provide a set of permissively licensed,
+ open source, cross platform software components in the Avogadro 2 libraries,
+ along with an end-user application with full source code, and binaries.
+ This package includes the io library.
+
+Package: libavogadroqtgui0
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}
+Description: chemical editor and visualization application - Qt GUI library
+ Avogadro 2 is a chemical editor and visualization application, it is also a
+ set of reusable software libraries written in C++ using principles of
+ modularity for maximum reuse. The development of the first generation Avogadro
+ application and library is documented in our paper, and this remains the
+ preferred method of citation at present. The motivation for rewriting
+ Avogadro, along with improvements and changes made in Avogadro 2 are
+ summarized in our Source article. We provide a set of permissively licensed,
+ open source, cross platform software components in the Avogadro 2 libraries,
+ along with an end-user application with full source code, and binaries.
+ This package includes the Qt GUI library.
+
+Package: libavogadroqtopengl0
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}
+Description: chemical editor and visualization application - Qt OpenGL library
+ Avogadro 2 is a chemical editor and visualization application, it is also a
+ set of reusable software libraries written in C++ using principles of
+ modularity for maximum reuse. The development of the first generation Avogadro
+ application and library is documented in our paper, and this remains the
+ preferred method of citation at present. The motivation for rewriting
+ Avogadro, along with improvements and changes made in Avogadro 2 are
+ summarized in our Source article. We provide a set of permissively licensed,
+ open source, cross platform software components in the Avogadro 2 libraries,
+ along with an end-user application with full source code, and binaries.
+ This package includes the Qt OpenGL library.
+
+Package: libavogadroqtplugins0
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}
+Description: chemical editor and visualization application - Qt OpenGL library
+ Avogadro 2 is a chemical editor and visualization application, it is also a
+ set of reusable software libraries written in C++ using principles of
+ modularity for maximum reuse. The development of the first generation Avogadro
+ application and library is documented in our paper, and this remains the
+ preferred method of citation at present. The motivation for rewriting
+ Avogadro, along with improvements and changes made in Avogadro 2 are
+ summarized in our Source article. We provide a set of permissively licensed,
+ open source, cross platform software components in the Avogadro 2 libraries,
+ along with an end-user application with full source code, and binaries.
+ This package includes the Qt OpenGL library.
+
+Package: libavogadroquantumio0
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}
+Description: chemical editor and visualization application - quantumio library
+ Avogadro 2 is a chemical editor and visualization application, it is also a
+ set of reusable software libraries written in C++ using principles of
+ modularity for maximum reuse. The development of the first generation Avogadro
+ application and library is documented in our paper, and this remains the
+ preferred method of citation at present. The motivation for rewriting
+ Avogadro, along with improvements and changes made in Avogadro 2 are
+ summarized in our Source article. We provide a set of permissively licensed,
+ open source, cross platform software components in the Avogadro 2 libraries,
+ along with an end-user application with full source code, and binaries.
+ This package includes the library that provides access to input/output file
+ formats of various quantum chemistry program packages.
+
+Package: libavogadrorendering0
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}
+Description: chemical editor and visualization application - rendering library
+ Avogadro 2 is a chemical editor and visualization application, it is also a
+ set of reusable software libraries written in C++ using principles of
+ modularity for maximum reuse. The development of the first generation Avogadro
+ application and library is documented in our paper, and this remains the
+ preferred method of citation at present. The motivation for rewriting
+ Avogadro, along with improvements and changes made in Avogadro 2 are
+ summarized in our Source article. We provide a set of permissively licensed,
+ open source, cross platform software components in the Avogadro 2 libraries,
+ along with an end-user application with full source code, and binaries.
+ This package includes the rendering library.
+
+Package: libavogadrovtk0
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}
+Description: chemical editor and visualization application - rendering library
+ Avogadro 2 is a chemical editor and visualization application, it is also a
+ set of reusable software libraries written in C++ using principles of
+ modularity for maximum reuse. The development of the first generation Avogadro
+ application and library is documented in our paper, and this remains the
+ preferred method of citation at present. The motivation for rewriting
+ Avogadro, along with improvements and changes made in Avogadro 2 are
+ summarized in our Source article. We provide a set of permissively licensed,
+ open source, cross platform software components in the Avogadro 2 libraries,
+ along with an end-user application with full source code, and binaries.
+ This package includes the rendering library.
+
+Package: avogadrolibs-python
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}
+Description: chemical editor and visualization application - python
+ Avogadro 2 is a chemical editor and visualization application, it is also a
+ set of reusable software libraries written in C++ using principles of
+ modularity for maximum reuse. The development of the first generation Avogadro
+ application and library is documented in our paper, and this remains the
+ preferred method of citation at present. The motivation for rewriting
+ Avogadro, along with improvements and changes made in Avogadro 2 are
+ summarized in our Source article. We provide a set of permissively licensed,
+ open source, cross platform software components in the Avogadro 2 libraries,
+ along with an end-user application with full source code, and binaries.
+ This package includes the python script library.
